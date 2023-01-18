@@ -32,7 +32,7 @@ Misc tips/approaches successful companies have taken
 - pick ESLint over TSLint (source: [ESLint](https://eslint.org/blog/2019/01/future-typescript-eslint) and [TS Roadmap](https://github.com/Microsoft/TypeScript/issues/29288)). [You can convert TSlint to ESlint with this tool](https://github.com/typescript-eslint/tslint-to-eslint-config).
 - New code must always be written in TypeScript. No exceptions. For existing code: If your task requires you to change JavaScript code, you need to rewrite it. (Source: [Hootsuite][hootsuite])
 
-<details>
+
 <summary>
 <b>
 Webpack tips
@@ -73,7 +73,7 @@ module: {
 
 Special note on `ts-loader` and 3rd party libraries: https://twitter.com/acemarke/status/1091150384184229888
 
-</details>
+
 
 ## Academic Studies of Migration
 

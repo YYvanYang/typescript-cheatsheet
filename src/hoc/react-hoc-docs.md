@@ -8,7 +8,7 @@ In this first section we refer closely to [the React docs on HOCs](https://react
 
 ## Docs Example: [Use HOCs For Cross-Cutting Concerns](https://reactjs.org/docs/higher-order-components.html#use-hocs-for-cross-cutting-concerns)
 
-<details>
+
 
 <summary>
 <b>Misc variables referenced in the example below</b>
@@ -80,7 +80,7 @@ function BlogPost({ data, id }: BlogPostProps) {
 
 [View in TypeScript Playground](https://www.typescriptlang.org/play/?jsx=2#code/JYWwDg9gTgLgBAJQKYEMDG8BmUIjgcilQ3wFgAoCgeirhgAskBnJOFIuxuMHMJuiHABGrYADsAVkgxIAJsICenVgAkA8gGEK4mEiiZ0rAOrAGAERQwUABV5MAPABUAfHADeFOHFmWUALjhHAG44Gm9fOGB+AHMkMT1gNAoAX2paR0j+BlYYBTBWCExwqzS4a0zlbjs4QsqAdygUMHz5NFxIeLF4BksK8Uw9IllSjQrstgwAVxQAG0iuvQM0AqLxhqaWuDbwCE74AApJlnkYQWjGoW8kA0mZmFsIPjhsXEiYAEoKJAAPSFhnyZiDDAXZwOqmegAZUmQiYaCgwDAMBBYicABoynAfroxLJ+CZzL4HnwnM4MRpnPtPKFaAwonQ8qxZjMIHV+EcBPMBlAyhihJN4OcUJdxrl8jUikZGs05Bp2rs4vAWGB2JYkDMlOCGBABW95rp9AkxNEwRDKv09HFlhKytSpRtZfK9gFkOgYAA6ABSkIAGgBRGZIECKuViJgwKCTDDQezWVwAMjgGjR1LCLEDGAsVgqKABQNOPMw0ECqdoPEe-Hprtkuw1wmkKCOohg+H4RBQNbEdfETGAshWlTQMxQTCY1PT0hgWf8cCp5C8Xh8VkhOqgywCYqQtWnK8ma6QKfnC-LfBdqE7Gvs3p97oAMsAhI0oAoALIoMQoWKyACCMAjD4FZh7GTOA1BAUxYwxAAiJcUCg5wEOpd44AAXlcRwKGQjwjzCcYQE-RIKkYIgAmvO8HyfV930-ORf3-fldH4cEZjmKwAGsci4TcbXtFo5R2PY2FxOAiCYCAZgAN2bfh+xuO4qgrUs2GiFAe26LgT34WoCXoacMTqehEnoCoJCOdSCgRaJxFmTFuK1Yz8Fg-ARKDCApPkF48FMNskAAR0mYAiGDLoxyPbjiX4FC4DI+9H3YKiPy-OiEQYoCQLAiDrGg2D4OcIJqW4yErF0VD3GpRdfACYJqWSfKjyIGA9zELZh1HOAdOnLFvhxPFEGID1+I6RVYzsDEirVVxsIXLZdnDSNoygfZNICCKsPKhcmEmfJFs0946umrw6SYd16HfWRAw0U7jVYKKjpOs6Lqu2J3SEcRZH2I69vWw7DOO8M1VKqaDoqqwAgnTNfH2HdV2WDFdu+uBavW1JKCPLxtiGrozD7F8dS6Ur9mQtC4GhvdlndDtZEu99YnvcM4j0D7fvu3FHpppAvtR6aMYVLoTBYgBVMQQDx+AosJ1DnAR0n93dIK3KQanrrpnFGbuq7zsVp6Obq9aNbZ66CaJqW0YXO6WBgcbdH2IHgdgsH1Unacod8Xd9wxO74dNrxkk59aiFxRm1u9mlKjFcQTSLHkmB4c8I84KJ3U0zJ3VTuApOfGbwEDb53XrcMwRQJRLPoeAxFZMZBFMgvuNMNh+HfBQEbCWDTRYuBw2AduRAZfI0EYNAOOGEOGqa2cEa8exeL4p1FWKFAULcc3iqQd1YOSdxU-dJnE+TkchIUd4N6oE3gc56aUZ9-bQ9HqBmo63w6pR6gACoX7gdRRiOGjTQYJNZ5CnAF+VAvi-GgPANoYZ4D8WCjAFWOloSwnhIiZEoIor2UQXCBESIURzi8DAxUKtDxeBdsuGGSAAjTkcIyY2JNXbkPdLEGABCQqE0wrrcgPw-gQNmvAAAQiyaI1gIDhgQTCLBKCUSlQweI5BODdh4LgAIiAQiREwGIbOGW646FWGofkOGdgAgZRgPYZRqjwwRWyr4eCxt1paNXkwsxwjwxLTsO6PsnxyB7SAA)
 
-</details>
+
 
 Example HOC from React Docs translated to TypeScript
 
@@ -184,7 +184,7 @@ HOCs can take the form of Functions that return Higher Order Components that ret
 
 Here we build our own mini `connect` to understand HOCs:
 
-<details>
+
 
 <summary>
 <b>Misc variables referenced in the example below</b>
@@ -220,7 +220,7 @@ function CommentList({ data }: WithSubscriptionProps<typeof comments>) {
 }
 ```
 
-</details>
+
 
 ```tsx
 const commentSelector = (_: any, ownProps: any) => ({

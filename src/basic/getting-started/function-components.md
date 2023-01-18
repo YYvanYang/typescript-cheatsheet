@@ -23,7 +23,7 @@ const App = ({ message }: { message: string }) => <div>{message}</div>;
 
 > Tip: You might use [Paul Shen's VS Code Extension](https://marketplace.visualstudio.com/items?itemName=paulshen.paul-typescript-toolkit) to automate the type destructure declaration (incl a [keyboard shortcut](https://twitter.com/_paulshen/status/1392915279466745857?s=20)).
 
-<details>
+
 
 <summary><b>Why is <code>React.FC</code> discouraged? What about <code>React.FunctionComponent</code>/<code>React.VoidFunctionComponent</code>?</b></summary>
 
@@ -55,7 +55,7 @@ const Title: React.FunctionComponent<{ title: string }> = ({
 }) => <div title={title}>{children}</div>;
 ```
 
-<details>
+
 <summary>(Deprecated)<b>Using <code>React.VoidFunctionComponent</code> or <code>React.VFC</code> instead</b></summary>
 
 In [@types/react 16.9.48](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/46643), the `React.VoidFunctionComponent` or `React.VFC` type was added for typing `children` explicitly.
@@ -92,15 +92,15 @@ const VoidFunctionComponent: React.VoidFunctionComponent<Props> = ({
 };
 ```
 
-</details>
+
 
 - _In the future_, it may automatically mark props as `readonly`, though that's a moot point if the props object is destructured in the parameter list.
 
 In most cases it makes very little difference which syntax is used, but you may prefer the more explicit nature of `React.FunctionComponent`.
 
-</details>
 
-<details>
+
+
 <summary><b>Minor Pitfalls</b></summary>
 
 These patterns are not supported:
@@ -130,4 +130,4 @@ const MyArrayComponent = () => Array(5).fill(<div />) as any as JSX.Element;
 
 [See commentary by @ferdaber here](https://github.com/typescript-cheatsheets/react/issues/57).
 
-</details>
+

@@ -36,7 +36,7 @@ export const FancyButton = forwardRef<Ref, Props>((props, ref) => (
 ));
 ```
 
-<details>
+
 <summary><b>Side note: the <code>ref</code> you get from <code>forwardRef</code> is mutable so you can assign to it if needed.</b></summary>
 
 This was done [on purpose](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/43265/). You can make it immutable if you have to - assign `React.Ref` if you want to ensure nobody reassigns it:
@@ -61,7 +61,7 @@ export const FancyButton = forwardRef(
 );
 ```
 
-</details>
+
 
 If you are grabbing the props of a component that forwards refs, use [`ComponentPropsWithRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/a05cc538a42243c632f054e42eab483ebf1560ab/types/react/index.d.ts#L770).
 

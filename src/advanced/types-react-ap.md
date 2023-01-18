@@ -39,7 +39,7 @@ Not Commonly Used but Good to know
 - `ComponentPropsWithoutRef` - props of a component without its `ref` prop
 - `HTMLProps` and `HTMLAttributes` - these are the most generic versions, for global attributes (see a list of [attributes marked as "global attribute" on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)). In general, prefer `React.ComponentProps`, `JSX.IntrinsicElements`, or [specialized HTMLAttributes interfaces](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/a2aa0406e7bf269eef01292fcb2b24dee89a7d2b/types/react/index.d.ts#L1914-L2625):
 
-<details>
+
   <summary>
   List of specialized HTMLAttributes
   </summary>
@@ -98,7 +98,7 @@ Note that there are about 50 of these, which means there are some HTML elements 
 - `VideoHTMLAttributes`
 - `WebViewHTMLAttributes`
 
-</details>
+
 
 - all methods: `createElement`, `cloneElement`, ... are all public and reflect the React runtime API
 

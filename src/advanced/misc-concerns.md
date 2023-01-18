@@ -175,13 +175,13 @@ declare module "de-indent" {
 }
 ```
 
-<details>
+
 
 <summary>Further Discussion</summary>
 
 Any other tips? Please contribute on this topic! [We have an ongoing issue here with some references](https://github.com/typescript-cheatsheets/react/issues/8). We have more discussion and examples [in our issue here](https://github.com/typescript-cheatsheets/react/issues/12).
 
-</details>
+
 
 ## Compilation Speed
 

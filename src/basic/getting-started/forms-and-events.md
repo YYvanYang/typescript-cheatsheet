@@ -51,13 +51,13 @@ Instead of typing the arguments and return values with `React.FormEvent<>` and `
   }
 ```
 
-<details>
+
 
 <summary><b>Why two ways to do the same thing?</b></summary>
 
 The first method uses an inferred method signature `(e: React.FormEvent<HTMLInputElement>): void` and the second method enforces a type of the delegate provided by `@types/react`. So `React.ChangeEventHandler<>` is simply a "blessed" typing by `@types/react`, whereas you can think of the inferred method as more... _artisanally hand-rolled_. Either way it's a good pattern to know. [See our Github PR for more](https://github.com/typescript-cheatsheets/react/pull/24).
 
-</details>
+
 
 **Typing onSubmit, with Uncontrolled components in a Form**
 
@@ -120,7 +120,7 @@ Of course, if you're making any sort of significant form, [you should use Formik
 | WheelEvent       | Scrolling on a mouse wheel or similar input device. (Note: `wheel` event should not be confused with the `scroll` event)                                                                                                                                               |
 | SyntheticEvent   | The base event for all above events. Should be used when unsure about event type                                                                                                                                                                                       |
 
-<details>
+
 <summary><b>What about <code>InputEvent</code>?</b></summary>
 
 You've probably noticed that there is no `InputEvent`. This is because it is not supported by Typescript as the event itself has no fully browser support and may behave differently in different browsers. You can use `KeyboardEvent` instead.
@@ -131,4 +131,4 @@ Sources:
 - https://developer.mozilla.org/en-US/docs/Web/API/InputEvent
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
 
-</details>
+

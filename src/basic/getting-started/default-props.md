@@ -79,7 +79,7 @@ class Greet extends React.Component<GreetProps> {
 let el = <Greet age={3} />;
 ```
 
-<details>
+
 <summary><b><code>JSX.LibraryManagedAttributes</code> nuance for library authors</b></summary>
 
 The above implementations work fine for App creators, but sometimes you want to be able to export `GreetProps` so that others can consume it. The problem here is that the way `GreetProps` is defined, `age` is a required prop when it isn't because of `defaultProps`.
@@ -105,7 +105,7 @@ export type ApparentGreetProps = JSX.LibraryManagedAttributes<
 
 This will work properly, although hovering over`ApparentGreetProps`may be a little intimidating. You can reduce this boilerplate with the`ComponentProps` utility detailed below.
 
-</details>
+
 
 ## Consuming Props of a Component with defaultProps
 
@@ -158,7 +158,7 @@ const el = <TestComponent name="foo" />;
 
 ## Misc Discussions and Knowledge
 
-<details>
+
 <summary><b>Why does <code>React.FC</code> break <code>defaultProps</code>?</b></summary>
 
 You can check the discussions here:
@@ -169,9 +169,9 @@ You can check the discussions here:
 
 This is just the current state and may be fixed in future.
 
-</details>
 
-<details>
+
+
 <summary><b>TypeScript 2.9 and earlier</b></summary>
 
 For TypeScript 2.9 and earlier, there's more than one way to do it, but this is the best advice we've yet seen:
@@ -207,6 +207,6 @@ The problem with this approach is it causes complex issues with the type inferen
 
 [See commentary by @ferdaber here](https://github.com/typescript-cheatsheets/react/issues/57) and [here](https://github.com/typescript-cheatsheets/react/issues/61).
 
-</details>
+
 
 [Something to add? File an issue](https://github.com/typescript-cheatsheets/react/issues/new).

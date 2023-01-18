@@ -56,7 +56,7 @@ type AppProps = {
 
 Notice we have used the TSDoc `/** comment */` style here on each prop. You can and are encouraged to leave descriptive comments on reusable components. For a fuller example and discussion, see our [Commenting Components](https://react-typescript-cheatsheet.netlify.app/docs/advanced/misc_concerns/#commenting-components) section in the Advanced Cheatsheet.
 
-<details>
+
 <summary>More on object types: <code>object</code>, <code>{"{}"}</code>, etc</summary>
 
 In Typescript, it's generally best to use specific types for objects. In most cases, this means a literal type like <code>{ id: string; name: string }</code>. In cases where there isn't a fixed structure for an object, you likely either want an index signature (possibly with the <code>Record</code> shorthand) - if there are values of a certain type, but the keys can change - or else <a href="https://www.typescriptlang.org/docs/handbook/2/generics.html">generics</a> - if the object structure is more-or-less an arbitrary black-box.
@@ -65,7 +65,7 @@ Another approach to objects is the <code>Map</code> data structure, but this is 
 
 "Vague" object types like <code>object</code>, <code>{}</code> are fairly niche and should be rarely used, and may function differently than you expect. <code>object</code> is any non-primitive value: this includes things like functions and arrays and constructors, not just "simple" objects. And <code>{}</code> is perhaps better thought of as "an interface with no required properties", not "an empty object" - in practice this type allows anything except <code>null</code> or <code>undefined</code>. <code>Object</code> behaves the same as <code>{}</code> and is basically never used.
 
-</details>
+
 
 ## Useful React Prop Type Examples
 
@@ -83,7 +83,7 @@ export declare interface AppProps {
 }
 ```
 
-<details>
+
 <summary><b>Small <code>React.ReactNode</code> edge case before React 18</b></summary>
 
 Before the [React 18 type updates](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210), this code typechecked but had a runtime error:
@@ -107,9 +107,9 @@ This is because `ReactNode` includes `ReactFragment` which allowed type `{}` bef
 
 [Thanks @pomle for raising this.](https://github.com/typescript-cheatsheets/react/issues/357)
 
-</details>
 
-<details>
+
+
  <summary><b>JSX.Element vs React.ReactNode?</b></summary>
 
 Quote [@ferdaber](https://github.com/typescript-cheatsheets/react/issues/57): A more technical explanation is that a valid React node is not the same thing as what is returned by `React.createElement`. Regardless of what a component ends up rendering, `React.createElement` always returns an object, which is the `JSX.Element` interface, but `React.ReactNode` is the set of all possible return values of a component.
@@ -117,7 +117,7 @@ Quote [@ferdaber](https://github.com/typescript-cheatsheets/react/issues/57): A 
 - `JSX.Element` -> Return value of `React.createElement`
 - `React.ReactNode` -> Return value of a component
 
-</details>
+
 
 [More discussion: Where ReactNode does not overlap with JSX.Element](https://github.com/typescript-cheatsheets/react/issues/129)
 

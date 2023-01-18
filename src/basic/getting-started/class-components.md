@@ -32,7 +32,7 @@ class App extends React.Component<MyProps, MyState> {
 
 Don't forget that you can export/import/extend these types/interfaces for reuse.
 
-<details>
+
 <summary><b>Why annotate <code>state</code> twice?</b></summary>
 
 It isn't strictly necessary to annotate the `state` class property, but it allows better type inference when accessing `this.state` and also initializing the state.
@@ -41,9 +41,9 @@ This is because they work in two different ways, the 2nd generic type parameter 
 
 [See commentary by @ferdaber here](https://github.com/typescript-cheatsheets/react/issues/57).
 
-</details>
 
-<details>
+
+
   <summary><b>No need for <code>readonly</code></b></summary>
 
 You often see sample code include `readonly` to mark props and state immutable:
@@ -59,7 +59,7 @@ type MyState = {
 
 This is not necessary as `React.Component<P,S>` already marks them as immutable. ([See PR and discussion!](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26813))
 
-</details>
+
 
 **Class Methods**: Do it like normal, but just remember any arguments for your functions also need to be typed:
 

@@ -122,7 +122,7 @@ function Counter() {
 
 [View in the TypeScript Playground](https://www.typescriptlang.org/play?#code/LAKFEsFsAcHsCcAuACAVMghgZ2QJQKYYDGKAZvLJMgOTyEnUDcooRsAdliuO+IuBgA2AZUQZE+ZAF5kAbzYBXdogBcyAAwBfZmBCIAntEkBBAMIAVAJIB5AHLmAmgAUAotOShkyAD5zkBozVqHiI6SHxlagAaZGgMfUFYDAATNXYFSAAjfHhNDxAvX1l-Q3wg5PxQ-HDImLiEpNTkLngeAHM8ll1SJRJwDmQ6ZIUiHIAKLnEykqNYUmQePgERMQkY4n4ONTMrO0dXAEo5T2aAdz4iAAtkMY3+9gA6APwj2ROvImxJYPYqmsRqCp3l5BvhEAp4Ow5IplGpJhIHjCUABqTB9DgPeqJFLaYGfLDfCp-CIAoEFEFeOjgyHQ2BKVTNVb4RF05TIAC0yFsGWy8Fu6MeWMaB1x5K8FVIGAUglUwK8iEuFFOyHY+GVLngFD5Bx0Xk0oH13V6myhplZEm1x3JbE4KAA2vD8DFkuAsHFEFcALruAgbB4KAkEYajPlDEY5GKLfhCURTHUnKkQqFjYEAHgAfHLkGb6WpZI6WfTDRSvKnMgpEIgBhxTIJwEQANZSWRjI5SdPIF1u8RXMayZ7lSphEnRWLxbFNagAVmomhF6fZqYA9OXKxxM2KQWWK1WoTW643m63pB2u+7e-3SkEQsPamOGik1FO55p08jl6vdxuKcvv8h4yAmhAA)
 
-<details>
+
 
 <summary><b>Usage with <code>Reducer</code> from <code>redux</code></b></summary>
 
@@ -136,7 +136,7 @@ import { Reducer } from 'redux';
 export function reducer: Reducer<AppState, Action>() {}
 ```
 
-</details>
+
 
 ## useEffect / useLayoutEffect
 
@@ -159,7 +159,7 @@ function DelayedEffect(props: { timerMs: number }) {
 }
 ```
 
-<details>
+
 <summary><b>Solution to the above example</b></summary>
 
 ```tsx
@@ -176,7 +176,7 @@ function DelayedEffect(props: { timerMs: number }) {
 }
 ```
 
-</details>
+
 
 ## useRef
 
@@ -217,14 +217,14 @@ doSomethingWith(divRef.current);
 
 Note that you are opting out of type safety here - you will have a runtime error if you forget to assign the ref to an element in the render, or if the ref-ed element is conditionally rendered.
 
-<details>
+
 <summary><b>Tip: Choosing which <code>HTMLElement</code> to use</b></summary>
-  
+
 Refs demand specificity - it is not enough to just specify any old `HTMLElement`. If you don't know the name of the element type you need, you can check [lib.dom.ts](https://github.com/microsoft/TypeScript/blob/v3.9.5/lib/lib.dom.d.ts#L19224-L19343) or make an intentional type error and let the language service tell you:
 
 ![image](https://user-images.githubusercontent.com/6764957/116914284-1c436380-ac7d-11eb-9150-f52c571c5f07.png)
 
-</details>
+
 
 ### Option 2: Mutable value ref
 
@@ -321,7 +321,7 @@ export function useLoading() {
 
 This way, when you destructure you actually get the right types based on destructure position.
 
-<details>
+
 <summary><b>Alternative: Asserting a tuple return type</b></summary>
 
 If you are [having trouble with const assertions](https://github.com/babel/babel/issues/9800), you can also assert or define the function return types:
@@ -362,7 +362,7 @@ function useTuple() {
 }
 ```
 
-</details>
+
 
 Note that the React team recommends that custom hooks that return more than two values should use proper objects instead of tuples, however.
 

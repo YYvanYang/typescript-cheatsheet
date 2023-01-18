@@ -39,7 +39,7 @@ export function Button(props: ButtonProps) {
 
 In future, the need to `forwardRef` may go away in React 17+, but for now we still have to deal with this. 🙃
 
-<details>
+
 <summary>
 
 Why not `ComponentProps` or `IntrinsicElements` or `[Element]HTMLAttributes` or `HTMLProps` or `HTMLAttributes`?
@@ -103,7 +103,7 @@ function App() {
 }
 ```
 
-</details>
+
 
 ### Wrapping/Mirroring a Component
 
@@ -380,7 +380,7 @@ type NumbersChildren = number[];
 type TwoNumbersChildren = [number, number];
 ```
 
-<details>
+
 <summary>
 Don't forget that you can also use `prop-types` if TS fails you.
 </summary>
@@ -396,7 +396,7 @@ Parent.propTypes = {
 };
 ```
 
-</details>
+
 
 ### What You CANNOT Do
 
@@ -498,7 +498,7 @@ function RouterLink(props: LinkProps | AnchorProps) {
 }
 ```
 
-<details>
+
   <summary><b>Approach: Generic Components</b></summary>
 
 Here is an example solution, see the further discussion for other solutions. _thanks to [@jpavon](https://github.com/typescript-cheatsheets/react/issues/12#issuecomment-394440577)_
@@ -525,9 +525,9 @@ const Link = <T extends {}>(
 </Link>; // error
 ```
 
-</details>
 
-<details>
+
+
   <summary><b>Approach: Composition</b></summary>
 
 If you want to conditionally render a component, sometimes is better to use [React's composition model](https://reactjs.org/docs/composition-vs-inheritance.html) to have simpler components and better to understand typings:
@@ -565,7 +565,7 @@ const LinkButton: React.FunctionComponent<RouterLinkProps> = (props) => (
 </AnchorButton>; // Error: Property 'to' does not exist on type...
 ```
 
-</details>
+
 
 You may also want to use Discriminated Unions, please check out [Expressive React Component APIs with Discriminated Unions](https://blog.andrewbran.ch/expressive-react-component-apis-with-discriminated-unions/).
 
@@ -594,7 +594,7 @@ function handle(event: UserEvent) {
 }
 ```
 
-<details>
+
   <summary>
   Take care: TypeScript does not narrow the type of a Discriminated Union on the basis of typeof checks. The type guard has to be on the value of a key and not it's type.
   </summary>
@@ -616,9 +616,9 @@ function handle(event: UserEvent) {
 
 The above example does not work as we are not checking the value of `event.value` but only it's type. Read more about it [microsoft/TypeScript#30506 (comment)](https://github.com/microsoft/TypeScript/issues/30506#issuecomment-474858198)
 
-</details>
 
-<details>
+
+
   <summary>
   Discriminated Unions in TypeScript can also work with hook dependencies in React. The type matched is automatically updated when the corresponding union member based on which a hook depends, changes. Expand more to see an example usecase.
    <br/><br/>
@@ -665,7 +665,7 @@ function App() {
 
 In the above example, based on the `isArray` union member, the type of the `value` hook dependency changes.
 
- </details>
+
 
 To streamline this you may also combine this with the concept of **User-Defined Type Guards**:
 
